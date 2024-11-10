@@ -1,6 +1,5 @@
 # 👋 Hi, I'm Vidhi Waghela
 
-![Banner](https://via.placeholder.com/1200x400?text=Welcome+to+My+Portfolio) <!-- Replace this with your banner image URL -->
 
 Welcome to my professional portfolio. I am a **Data Scientist** specialized in **Computer Vision**, **Machine Learning**, and **Cybersecurity** with hands-on experience in **Computational Neuroscience** and **Brain-Like Computing**. As a Kaggle Expert and an AI enthusiast, I am passionate about solving real-world problems with advanced data and AI techniques.
 
