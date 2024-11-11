@@ -6,7 +6,7 @@
     <title>Vidhi Kishor Waghela - AI & Neuroscience Expert</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
     <style>
-        /* Basic Styles and Color Scheme */
+        /* Basic Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -52,23 +52,92 @@
             margin-bottom: 20px;
             color: #3e2723;
         }
-        .grid-container {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-        .card {
-            background-color: #d7ccc8;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
+        /* Education Section Styles */
+        #education {
+            background: #e8eaf6;
+            color: #283593;
+            padding: 50px;
             border-radius: 8px;
+        }
+        .education-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .education-card {
+            background: #c5cae9;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            width: 80%;
             padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s;
+            font-family: 'Merriweather', serif;
+        }
+        .education-card:hover {
+            transform: scale(1.05);
+        }
+        .education-card h3 {
+            font-size: 1.8rem;
+            color: #1a237e;
+            margin-bottom: 5px;
             text-align: center;
         }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+        .education-card p {
+            text-align: center;
+            font-size: 1rem;
         }
+
+        /* Professional Experience Section - Roadmap */
+        #experience {
+            position: relative;
+            margin: 50px 0;
+        }
+        .roadmap {
+            position: relative;
+            padding: 20px 0;
+            border-left: 4px solid #795548;
+            margin-left: 50px;
+        }
+        .roadmap-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 30px;
+        }
+        .roadmap-item:before {
+            content: "";
+            position: absolute;
+            left: -25px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #795548;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .roadmap-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .roadmap-item p {
+            font-size: 1rem;
+        }
+
+        /* Lady Boss GIFs */
+        .boss-gif {
+            display: block;
+            margin: 20px auto;
+            max-width: 100px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .boss-gif:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        /* Chatbot and Button */
         .chatbot-btn {
             position: fixed;
             bottom: 20px;
@@ -140,86 +209,57 @@
         <p>AI & Neuroscience Researcher | Machine Learning Specialist | Cybersecurity Enthusiast</p>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <p>Hi, I'm Vidhi, an expert in Artificial Intelligence, Machine Learning, and Neuroscience. My work integrates data science with cognitive sciences to solve complex problems, blending technical expertise with a curiosity-driven approach.</p>
-    </section>
-
-    <!-- Research Interest Section -->
-    <section id="research">
-        <h2 class="section-title">Research Interest</h2>
-        <p>I'm fascinated by Data Science, Computer Vision, AI, and ML, exploring applications of Large Language Models (LLMs). My interest extends to the intersection of Data Science and Cyber Security, with a focus on threat detection and secure data handling. Additionally, I'm captivated by Computational Cognitive Neuroscience, Brain-Like Computing, and Generative AI.</p>
+        <img src="lady_boss_gif1.gif" alt="Lady Boss GIF" class="boss-gif">
     </section>
 
     <!-- Education Section -->
     <section id="education">
         <h2 class="section-title">Education</h2>
-        <div class="grid-container">
-            <div class="card">
+        <div class="education-container">
+            <div class="education-card">
                 <h3>Master of Science in AI and ML Ops</h3>
                 <p>SVKM's NMIMS, Mumbai, India | CGPA: 3.6/4</p>
                 <p><strong>Thesis:</strong> Enhancing Image In-painting Using Deep Learning Techniques</p>
                 <p>Supervisor: Dr. Saketh Athkuri, National Institute of Technology, Calicut</p>
             </div>
-            <div class="card">
+            <div class="education-card">
                 <h3>Bachelor of Science in Information & Technology</h3>
                 <p>University of Mumbai, India | CGPA: 8.67/10</p>
                 <p><strong>Thesis:</strong> Learn to be Secure!</p>
                 <p>Supervisor: Mr. Sameer Kamble, Patkar Varde College</p>
             </div>
         </div>
+        <img src="lady_boss_gif2.gif" alt="Lady Boss GIF" class="boss-gif">
     </section>
 
-    <!-- Experience Section -->
+    <!-- Professional Experience Section -->
     <section id="experience">
         <h2 class="section-title">Professional Experience</h2>
-        <div class="grid-container">
-            <div class="card">
+        <div class="roadmap">
+            <div class="roadmap-item">
                 <h3>Research Intern (Hybrid)</h3>
                 <p>JSA LAABS, Valsad, Gujarat, India | Jul 2024 – Present</p>
-                <ul>
-                    <li>Conducted research in Computational Neuroscience and Neuromorphic Engineering</li>
-                    <li>Developed neuro-inspired hardware optimization algorithms</li>
-                </ul>
+                <p>Conducted research in Computational Neuroscience and Neuromorphic Engineering, developing neuro-inspired hardware optimization algorithms.</p>
             </div>
-            <div class="card">
+            <div class="roadmap-item">
                 <h3>Founder</h3>
                 <p>Data Science Meets Cyber Security, Mumbai, India | 2021 - Present</p>
                 <p>Focused on innovative solutions integrating data science with cybersecurity.</p>
             </div>
         </div>
+        <img src="lady_boss_gif3.gif" alt="Lady Boss GIF" class="boss-gif">
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>Brain Tumor Detection</h3>
-                <p>Deep learning model for detecting brain tumors from MRI images. <a href="https://github.com/Vidhi1290/Brain-Tumor-Detection" target="_blank">See on GitHub</a></p>
-            </div>
-            <div class="card">
-                <h3>AI Text Generator Detection</h3>
-                <p>BERT-based model to detect AI-generated text. <a href="https://github.com/Vidhi1290/LLM---Detect-AI-Generated-Text" target="_blank">Explore Repo</a></p>
-            </div>
-            <div class="card">
-                <h3>Spiking Neural Networks for Cognitive Tasks</h3>
-                <p>Neural network simulation mimicking cognitive processes. <a href="https://github.com/Vidhi1290" target="_blank">Learn More</a></p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <p>Feel free to reach out for collaboration at <a href="mailto:vidhiwaghela2000@outlook.com">vidhiwaghela2000@outlook.com</a>.</p>
-    </section>
-
-    <!-- Chatbot Floating Button -->
+    <!-- Chatbot Button -->
     <div class="chatbot-btn" onclick="toggleChatbot()">💬</div>
     <div class="chatbot-container" id="chatbot">
-        <div class="chatbot-header">Vidhi's AI Chatbot</div>
+        <div class="chatbot-header">Chat with Me</div>
         <div class="chatbot-body" id="chatbotBody">
-            <p>Hi! I'm here to answer questions about my work. How can I assist you today?</p>
+            <p>Hi there! I'm here to answer questions about my work. How can I assist you today?</p>
         </div>
         <div class="chatbot-input-container">
             <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Type a message..." />
@@ -244,6 +284,5 @@
             }
         }
     </script>
-
 </body>
 </html>
