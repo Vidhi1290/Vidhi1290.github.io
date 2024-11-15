@@ -31,12 +31,34 @@
         a:hover {
             color: #1abc9c;
         }
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #34495e;
+            color: #ecf0f1;
+            padding: 20px;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            font-weight: 500;
+        }
         /* Header */
         header {
             background: linear-gradient(to right, #2c3e50, #34495e);
             color: #ecf0f1;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
         header h1 {
             font-size: 3rem;
@@ -57,7 +79,7 @@
             margin: 20px auto;
             font-size: 1.1rem;
         }
-        /* Roadmap Section (Education & Experience) */
+        /* Roadmap Section */
         #roadmap {
             background: #bdc3c7;
             padding: 50px 20px;
@@ -107,79 +129,50 @@
             margin-bottom: 10px;
             font-size: 1.3rem;
         }
-        /* Accomplishments Section */
-        #accomplishments {
+        /* Projects Section */
+        #projects {
             background: #eaf2f8;
             padding: 50px 20px;
             text-align: center;
         }
-        .badges-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .badge {
-            font-size: 1rem;
+        .project-card {
+            display: inline-block;
+            width: 300px;
             background: #3498db;
             color: #ecf0f1;
-            padding: 10px 15px;
-            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        .badge:hover {
-            transform: scale(1.1);
-            background: #1abc9c;
+        .project-card:hover {
+            transform: translateY(-10px);
         }
-        /* Core Competencies Section */
-        #core-competencies {
-            background: #f5f7fa;
-            padding: 50px 20px;
+        .project-card h3 {
+            font-size: 1.5rem;
         }
-        #core-competencies ul {
-            max-width: 800px;
-            margin: auto;
-            list-style: none;
-            padding: 0;
-            font-size: 1.1rem;
-        }
-        #core-competencies li {
-            padding: 10px 0;
-        }
-        /* Contact Section */
-        #contact {
+        /* Footer */
+        footer {
             background: #2c3e50;
             color: #ecf0f1;
             text-align: center;
-            padding: 50px 20px;
-        }
-        .contact-icons a {
-            font-size: 2rem;
-            margin: 0 10px;
-            color: #1abc9c;
-        }
-        .contact-icons a:hover {
-            color: #e74c3c;
-        }
-        .chatbot-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #3498db;
-            color: #ecf0f1;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#roadmap">Education & Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Header -->
     <header>
         <h1>Vidhi Kishor Waghela</h1>
@@ -208,56 +201,25 @@
                 <h3>Founder</h3>
                 <p>Data Science Meets Cybersecurity | 2021 - Present</p>
             </div>
-            <div class="roadmap-item">
-                <h3>Research Intern</h3>
-                <p>JSA LAABS, Gujarat | Jul 2024 - Present</p>
-            </div>
-            <div class="roadmap-item">
-                <h3>Data Science Intern</h3>
-                <p>Learning Bot, Bengaluru | Dec 2022 - Feb 2023</p>
-            </div>
-            <div class="roadmap-item">
-                <h3>Cybersecurity Intern</h3>
-                <p>Virtual Testing Foundation, USA | Jan 2021 - Mar 2021</p>
-            </div>
         </div>
     </section>
 
-    <!-- Core Competencies -->
-    <section id="core-competencies">
-        <h2>Core Competencies & Technologies</h2>
-        <ul>
-            <li><strong>Languages:</strong> Python, Bash, NodeJS, Java, R, C++</li>
-            <li><strong>Frameworks/Tools:</strong> OpenCV, TensorFlow, Keras, PyTorch, Scikit-learn</li>
-            <li><strong>Skills:</strong> Research, Computer Vision, Data Analysis, Scientific Computing, SNNs</li>
-        </ul>
-    </section>
-
-    <!-- Accomplishments -->
-    <section id="accomplishments">
-        <h2>Accomplishments</h2>
-        <div class="badges-container">
-            <span class="badge">Top 15 Cybersecurity Researcher</span>
-            <span class="badge">15+ Hall of Fame Acknowledgments</span>
-            <span class="badge">1st Rank MSc Thesis</span>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <h3>AI-Driven Image Inpainting</h3>
+            <p>Using deep learning techniques to enhance image quality and predict missing data.</p>
         </div>
-        <p>Fun Fact: I’m not a bot—just someone who loves creating them!</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Connect with Me</h2>
-        <p>Email: <a href="mailto:vidhiwaghela99@gmail.com">vidhiwaghela99@gmail.com</a></p>
-        <p>Phone: +91 9152257810</p>
-        <div class="contact-icons">
-            <a href="https://github.com/Vidhi1290" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/vidhi-waghela-434663198/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <div class="project-card">
+            <h3>Cybersecurity Vulnerability Detection</h3>
+            <p>Identifying vulnerabilities in web applications with advanced penetration testing tools.</p>
         </div>
     </section>
 
-    <!-- Chatbot -->
-    <div class="chatbot-btn">
-        💬
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>Connect with me on <a href="https://github.com/Vidhi1290">GitHub</a> | <a href="https://www.linkedin.com/in/vidhi-waghela-434663198/">LinkedIn</a></p>
+    </footer>
 </body>
 </html>
