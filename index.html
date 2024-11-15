@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidhi Kishor Waghela - AI, Neuroscience & Cybersecurity</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Lobster&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
@@ -14,7 +14,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             background: #0e2433;
             color: #fff;
@@ -27,7 +27,7 @@
         a {
             color: #00d1b2;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
         a:hover {
             color: #ff6347;
@@ -39,25 +39,17 @@
             padding: 60px 20px;
         }
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-family: 'Lobster', cursive;
         }
         header p {
             margin-top: 10px;
-            font-size: 1.2rem;
-        }
-        /* Section Styles */
-        section {
-            padding: 50px 20px;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #ff6347;
+            font-size: 1.5rem;
         }
         /* About Section */
         #about {
             background: #1b2a41;
+            padding: 50px 20px;
             text-align: center;
         }
         #about p {
@@ -65,29 +57,13 @@
             margin: 20px auto;
             font-size: 1.2rem;
         }
-        /* Research Interests */
-        #research {
-            background: #14213d;
-        }
-        #research ul {
-            list-style: none;
-            max-width: 800px;
-            margin: auto;
-            padding: 0;
-            font-size: 1.2rem;
-        }
-        #research li {
-            padding: 10px 0;
-            border-bottom: 1px solid #00d1b2;
-        }
-        /* Roadmap (Education and Experience) */
+        /* Roadmap Section (Education & Experience) */
         #roadmap {
-            background: #1b2a41;
-            position: relative;
+            background: #14213d;
             padding: 50px 20px;
         }
         .roadmap {
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
             position: relative;
         }
@@ -103,9 +79,13 @@
         }
         .roadmap-item {
             position: relative;
-            width: 50%;
+            width: 45%;
             padding: 20px;
-            text-align: center;
+            background: #1b2a41;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
         }
         .roadmap-item:nth-child(odd) {
             left: 0;
@@ -116,40 +96,39 @@
         .roadmap-item:before {
             content: '';
             position: absolute;
-            top: 20px;
-            width: 15px;
-            height: 15px;
+            top: 30%;
+            left: -20px;
+            width: 20px;
+            height: 20px;
             background: #ff6347;
             border-radius: 50%;
-            left: -20px;
-            transform: translateX(-50%);
         }
-        .roadmap-item h3 {
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-        /* Accomplishments */
+        /* Accomplishments Section */
         #accomplishments {
             background: #203a43;
             text-align: center;
-        }
-        .badges-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            padding: 50px 20px;
         }
         .badge {
-            background: #ff6347;
+            font-size: 1.2rem;
+            color: #00d1b2;
             padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            border: 2px solid #ff6347;
+            border-radius: 20px;
+            margin: 10px;
+            display: inline-block;
+        }
+        #accomplishments p {
+            margin-top: 20px;
+            font-size: 1rem;
+            font-style: italic;
+            color: #ff6347;
         }
         /* Contact Section */
         #contact {
             background: #0e2433;
             text-align: center;
+            padding: 50px 20px;
         }
         .contact-icons a {
             font-size: 2rem;
@@ -159,34 +138,38 @@
         .contact-icons a:hover {
             color: #ff6347;
         }
+        .chatbot-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff6347;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <h1>Vidhi Kishor Waghela</h1>
-        <p>AI Researcher | Neuroscience Enthusiast | Cybersecurity Advocate</p>
+        <p>"Your friendly neighborhood AI enthusiast with a sprinkle of cybersecurity expertise."</p>
     </header>
 
     <!-- About Section -->
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <p>
-            I am passionate about AI, Neuroscience, and Cybersecurity. My goal is to bridge the gap between computational intelligence
-            and real-world applications, innovating solutions for complex challenges.
+            Hey there! I’m Vidhi, the tech geek who believes AI and Neuroscience can solve half the world’s problems— 
+            the other half being solved by a good cup of coffee. I work on data, train machines, and sometimes pretend my code is a sitcom plot.
         </p>
-    </section>
-
-    <!-- Research Interests Section -->
-    <section id="research">
-        <h2 class="section-title">Research Interests</h2>
-        <ul>
-            <li>Data Science & Artificial Intelligence</li>
-            <li>Large Language Models (LLMs)</li>
-            <li>Computational Neuroscience & Brain-Like Computing</li>
-            <li>Cybersecurity & Data Analytics</li>
-            <li>Generative AI & Machine Learning</li>
-        </ul>
     </section>
 
     <!-- Roadmap Section -->
@@ -196,22 +179,26 @@
             <div class="roadmap-item">
                 <h3>MSc in AI & ML Ops</h3>
                 <p>SVKM's NMIMS, Mumbai | 2021-2023</p>
+                <p><em>Thesis:</em> Enhancing Image Inpainting Using Deep Learning Techniques</p>
             </div>
             <div class="roadmap-item">
                 <h3>Founder</h3>
                 <p>Data Science Meets Cybersecurity | 2021 - Present</p>
             </div>
+            <div class="roadmap-item">
+                <h3>Research Intern</h3>
+                <p>JSA LAABS, Gujarat | Jul 2024 - Present</p>
+            </div>
         </div>
     </section>
 
-    <!-- Accomplishments Section -->
+    <!-- Accomplishments -->
     <section id="accomplishments">
         <h2 class="section-title">Accomplishments</h2>
-        <div class="badges-container">
-            <span class="badge">Top 15 Cybersecurity Researcher</span>
-            <span class="badge">15+ Hall of Fame Acknowledgments</span>
-            <span class="badge">MSc Thesis Ranked 1st</span>
-        </div>
+        <span class="badge">Top 15 Cybersecurity Researcher</span>
+        <span class="badge">15+ Hall of Fame Acknowledgments</span>
+        <span class="badge">1st Rank MSc Thesis</span>
+        <p>"Fun Fact: My debugger is convinced I’m the main character!"</p>
     </section>
 
     <!-- Contact Section -->
@@ -222,8 +209,13 @@
         <div class="contact-icons">
             <a href="https://github.com/Vidhi1290" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/vidhi-waghela-434663198/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/vidhi_waghela__/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>Fun Fact: I’m not a bot—just someone who loves creating them!</p>
     </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-btn">
+        💬
+    </div>
 </body>
 </html>
