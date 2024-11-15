@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidhi Kishor Waghela - AI, Neuroscience & Cybersecurity</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
@@ -21,6 +21,7 @@
             scroll-behavior: smooth;
         }
         h1, h2, h3 {
+            font-family: 'Roboto Slab', serif;
             color: #ff6347;
         }
         a {
@@ -31,103 +32,105 @@
         a:hover {
             color: #ff6347;
         }
-        /* Header Section */
+        /* Header */
         header {
             background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             text-align: center;
-            padding: 60px 0;
+            padding: 60px 20px;
         }
         header h1 {
             font-size: 3rem;
         }
         header p {
             margin-top: 10px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+        }
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff6347;
         }
         /* About Section */
         #about {
             background: #1b2a41;
-            padding: 50px 20px;
             text-align: center;
         }
         #about p {
             max-width: 800px;
             margin: 20px auto;
+            font-size: 1.2rem;
         }
-        /* Research Interests Section */
+        /* Research Interests */
         #research {
             background: #14213d;
-            padding: 50px 20px;
         }
         #research ul {
             list-style: none;
             max-width: 800px;
             margin: auto;
             padding: 0;
+            font-size: 1.2rem;
         }
         #research li {
             padding: 10px 0;
+            border-bottom: 1px solid #00d1b2;
         }
-        /* Projects Section */
-        #projects {
+        /* Roadmap (Education and Experience) */
+        #roadmap {
             background: #1b2a41;
+            position: relative;
             padding: 50px 20px;
         }
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .project-card {
-            background: #14213d;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-        .project-card h3 {
-            margin-bottom: 10px;
-        }
-        /* Education and Experience Section */
-        #education {
-            background: #203a43;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .timeline {
-            max-width: 1000px;
+        .roadmap {
+            max-width: 800px;
             margin: auto;
             position: relative;
         }
-        .timeline::before {
+        .roadmap::before {
             content: '';
             position: absolute;
-            left: 50%;
             top: 0;
-            bottom: 0;
+            left: 50%;
             width: 4px;
+            height: 100%;
             background: #00d1b2;
+            transform: translateX(-50%);
         }
-        .timeline-item {
+        .roadmap-item {
             position: relative;
-            padding: 20px;
             width: 50%;
+            padding: 20px;
+            text-align: center;
         }
-        .timeline-item:nth-child(odd) {
+        .roadmap-item:nth-child(odd) {
             left: 0;
         }
-        .timeline-item:nth-child(even) {
+        .roadmap-item:nth-child(even) {
             left: 50%;
         }
-        /* Accomplishments Section */
+        .roadmap-item:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 15px;
+            height: 15px;
+            background: #ff6347;
+            border-radius: 50%;
+            left: -20px;
+            transform: translateX(-50%);
+        }
+        .roadmap-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        /* Accomplishments */
         #accomplishments {
-            background: #0f172a;
-            padding: 50px 20px;
+            background: #203a43;
             text-align: center;
         }
         .badges-container {
@@ -140,12 +143,12 @@
             background: #ff6347;
             padding: 10px 20px;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
         }
         /* Contact Section */
         #contact {
             background: #0e2433;
-            padding: 50px 20px;
             text-align: center;
         }
         .contact-icons a {
@@ -167,7 +170,7 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
+        <h2 class="section-title">About Me</h2>
         <p>
             I am passionate about AI, Neuroscience, and Cybersecurity. My goal is to bridge the gap between computational intelligence
             and real-world applications, innovating solutions for complex challenges.
@@ -176,41 +179,25 @@
 
     <!-- Research Interests Section -->
     <section id="research">
-        <h2>Research Interests</h2>
+        <h2 class="section-title">Research Interests</h2>
         <ul>
-            <li>Artificial Intelligence & Machine Learning</li>
-            <li>Computational Neuroscience & Brain-like Computing</li>
-            <li>Cybersecurity and Data Privacy</li>
-            <li>Large Language Models & Generative AI</li>
+            <li>Data Science & Artificial Intelligence</li>
+            <li>Large Language Models (LLMs)</li>
+            <li>Computational Neuroscience & Brain-Like Computing</li>
+            <li>Cybersecurity & Data Analytics</li>
+            <li>Generative AI & Machine Learning</li>
         </ul>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Brain Tumor Detection</h3>
-                <p>A deep learning solution achieving 96% accuracy in classification.</p>
-                <a href="https://github.com/Vidhi1290/Brain-Tumor-Detection" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>CycleGAN for Image Translation</h3>
-                <p>An advanced CycleGAN model for style transformation tasks.</p>
-                <a href="https://github.com/Vidhi1290/CycleGAN-Implementation-for-Image-To-Image-Translation" target="_blank">View Project</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education and Experience Section -->
-    <section id="education">
-        <h2>Education & Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
+    <!-- Roadmap Section -->
+    <section id="roadmap">
+        <h2 class="section-title">Education & Experience</h2>
+        <div class="roadmap">
+            <div class="roadmap-item">
                 <h3>MSc in AI & ML Ops</h3>
                 <p>SVKM's NMIMS, Mumbai | 2021-2023</p>
             </div>
-            <div class="timeline-item">
+            <div class="roadmap-item">
                 <h3>Founder</h3>
                 <p>Data Science Meets Cybersecurity | 2021 - Present</p>
             </div>
@@ -219,7 +206,7 @@
 
     <!-- Accomplishments Section -->
     <section id="accomplishments">
-        <h2>Accomplishments</h2>
+        <h2 class="section-title">Accomplishments</h2>
         <div class="badges-container">
             <span class="badge">Top 15 Cybersecurity Researcher</span>
             <span class="badge">15+ Hall of Fame Acknowledgments</span>
@@ -229,14 +216,14 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2 class="section-title">Connect with Me</h2>
         <p>Email: <a href="mailto:vidhiwaghela99@gmail.com">vidhiwaghela99@gmail.com</a></p>
         <p>Phone: +91 9152257810</p>
         <div class="contact-icons">
             <a href="https://github.com/Vidhi1290" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/vidhi-waghela-434663198/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/vidhi_waghela__/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
+        <p>Fun Fact: I’m not a bot—just someone who loves creating them!</p>
     </section>
 </body>
 </html>
