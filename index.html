@@ -3,150 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidhi Kishor Waghela - AI & Neuroscience Expert</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather&display=swap" rel="stylesheet">
+    <title>Vidhi Kishor Waghela - AI, Neuroscience & Cybersecurity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Basic Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
+        /* General Styles */
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #f5ebe0, #eceff1);
-            color: #3e2723;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: #0e2433;
+            scroll-behavior: smooth;
         }
         h1, h2, h3 {
-            color: #3e2723;
+            color: #ff6347;
         }
         a {
-            color: #795548;
+            color: #00d1b2;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
         a:hover {
-            color: #5d4037;
+            color: #ff6347;
         }
+        /* Header Section */
         header {
-            background: linear-gradient(135deg, #3e2723, #795548);
-            color: #fff;
-            padding: 50px 0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             text-align: center;
-            position: relative;
-            z-index: 1;
+            padding: 50px 0;
         }
         header h1 {
-            font-size: 3rem;
-            margin: 0;
+            font-size: 2.5rem;
         }
         header p {
-            font-size: 1.2rem;
-            margin: 10px 0 0;
-        }
-        /* Background Animation */
-        header:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('particles.gif') no-repeat center center/cover;
-            z-index: -1;
-            opacity: 0.2;
-        }
-        section {
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 30px;
-            color: #3e2723;
-        }
-        .about {
-            text-align: center;
-        }
-        .about p {
+            margin: 10px 0;
             font-size: 1.2rem;
         }
-        .projects {
+        .btn {
+            padding: 10px 20px;
+            background: #ff6347;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e55347;
+        }
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            text-align: center;
+            background: #1b2a41;
+        }
+        #about p {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Projects Section */
+        #projects {
+            padding: 50px 20px;
+            background: #14213d;
+        }
+        .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
         .project-card {
-            background: #fff;
+            background: #1b2a41;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
         }
         .project-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
         }
         .project-card h3 {
-            margin: 0 0 10px;
+            margin-bottom: 10px;
         }
-        .contact {
+        /* Contact Section */
+        #contact {
+            background: #0f172a;
+            padding: 50px 20px;
             text-align: center;
-            margin-top: 20px;
         }
-        .contact-icons {
-            margin-top: 10px;
-        }
-        .contact-icons a {
-            font-size: 1.5rem;
+        .social-icons a {
+            font-size: 2rem;
             margin: 0 10px;
-            color: #3e2723;
-            transition: transform 0.3s;
+            color: #00d1b2;
         }
-        .contact-icons a:hover {
-            transform: scale(1.2);
+        .social-icons a:hover {
+            color: #ff6347;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Vidhi Kishor Waghela</h1>
-        <p>AI & Neuroscience Researcher | Cybersecurity Enthusiast</p>
+        <p>AI Researcher | Neuroscience Enthusiast | Cybersecurity Advocate</p>
     </header>
 
+    <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about">
-            <p>I am passionate about AI, Neuroscience, and Cybersecurity, striving to create innovative solutions to complex problems. My work bridges these fields with a focus on real-world applications.</p>
-        </div>
+        <h2>About Me</h2>
+        <p>
+            I am a passionate AI and neuroscience researcher, with expertise in data science, machine learning, and cybersecurity.
+            My goal is to bridge the gap between computational intelligence and real-world applications.
+        </p>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
             <div class="project-card">
                 <h3>Brain Tumor Detection</h3>
-                <p>A deep learning model achieving 96% accuracy in identifying brain tumors.</p>
-                <a href="https://github.com/Vidhi1290/Brain-Tumor-Detection" target="_blank">View on GitHub</a>
+                <p>A deep learning solution achieving 96% accuracy in brain tumor classification.</p>
+                <a href="https://github.com/Vidhi1290/Brain-Tumor-Detection" target="_blank">View Project</a>
             </div>
             <div class="project-card">
-                <h3>Face Recognition System</h3>
-                <p>Implemented using FaceNet for real-time face recognition.</p>
-                <a href="https://github.com/Vidhi1290/Face-Recognition-System-in-Python-using-FaceNet" target="_blank">View on GitHub</a>
+                <h3>CycleGAN for Image Translation</h3>
+                <p>An advanced CycleGAN model for style transformation tasks.</p>
+                <a href="https://github.com/Vidhi1290/CycleGAN-Implementation-for-Image-To-Image-Translation" target="_blank">View Project</a>
             </div>
-            <!-- Add more projects -->
+            <!-- Add more projects dynamically -->
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Let's Connect</h2>
-        <p>Feel free to reach out!</p>
-        <div class="contact-icons">
-            <a href="mailto:vidhiwaghela99@gmail.com"><i class="fas fa-envelope"></i></a>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:vidhiwaghela99@gmail.com">vidhiwaghela99@gmail.com</a></p>
+        <p>Phone: +91 9152257810</p>
+        <div class="social-icons">
             <a href="https://github.com/Vidhi1290" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.kaggle.com/vidhikishorwaghela" target="_blank"><i class="fab fa-kaggle"></i></a>
-            <a href="https://www.linkedin.com/in/vidhi-waghela-434663198/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://linkedin.com/in/vidhi-waghela-434663198/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/vidhi_waghela__/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/VidhiWaghela" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </section>
 </body>
