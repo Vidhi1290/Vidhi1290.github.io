@@ -16,8 +16,8 @@
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #fff;
             background: #0e2433;
+            color: #fff;
             scroll-behavior: smooth;
         }
         h1, h2, h3 {
@@ -35,54 +35,56 @@
         header {
             background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             text-align: center;
-            padding: 50px 0;
+            padding: 60px 0;
         }
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
         header p {
-            margin: 10px 0;
-            font-size: 1.2rem;
-        }
-        .btn {
-            padding: 10px 20px;
-            background: #ff6347;
-            border: none;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #e55347;
+            margin-top: 10px;
+            font-size: 1.5rem;
         }
         /* About Section */
         #about {
+            background: #1b2a41;
             padding: 50px 20px;
             text-align: center;
-            background: #1b2a41;
         }
         #about p {
             max-width: 800px;
             margin: 20px auto;
         }
+        /* Research Interests Section */
+        #research {
+            background: #14213d;
+            padding: 50px 20px;
+        }
+        #research ul {
+            list-style: none;
+            max-width: 800px;
+            margin: auto;
+            padding: 0;
+        }
+        #research li {
+            padding: 10px 0;
+        }
         /* Projects Section */
         #projects {
+            background: #1b2a41;
             padding: 50px 20px;
-            background: #14213d;
         }
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
         .project-card {
-            background: #1b2a41;
+            background: #14213d;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
         }
         .project-card:hover {
@@ -91,18 +93,67 @@
         .project-card h3 {
             margin-bottom: 10px;
         }
-        /* Contact Section */
-        #contact {
+        /* Education and Experience Section */
+        #education {
+            background: #203a43;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .timeline {
+            max-width: 1000px;
+            margin: auto;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #00d1b2;
+        }
+        .timeline-item {
+            position: relative;
+            padding: 20px;
+            width: 50%;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        /* Accomplishments Section */
+        #accomplishments {
             background: #0f172a;
             padding: 50px 20px;
             text-align: center;
         }
-        .social-icons a {
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .badge {
+            background: #ff6347;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        /* Contact Section */
+        #contact {
+            background: #0e2433;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .contact-icons a {
             font-size: 2rem;
             margin: 0 10px;
             color: #00d1b2;
         }
-        .social-icons a:hover {
+        .contact-icons a:hover {
             color: #ff6347;
         }
     </style>
@@ -118,9 +169,20 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            I am a passionate AI and neuroscience researcher, with expertise in data science, machine learning, and cybersecurity.
-            My goal is to bridge the gap between computational intelligence and real-world applications.
+            I am passionate about AI, Neuroscience, and Cybersecurity. My goal is to bridge the gap between computational intelligence
+            and real-world applications, innovating solutions for complex challenges.
         </p>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="research">
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Artificial Intelligence & Machine Learning</li>
+            <li>Computational Neuroscience & Brain-like Computing</li>
+            <li>Cybersecurity and Data Privacy</li>
+            <li>Large Language Models & Generative AI</li>
+        </ul>
     </section>
 
     <!-- Projects Section -->
@@ -129,7 +191,7 @@
         <div class="projects-container">
             <div class="project-card">
                 <h3>Brain Tumor Detection</h3>
-                <p>A deep learning solution achieving 96% accuracy in brain tumor classification.</p>
+                <p>A deep learning solution achieving 96% accuracy in classification.</p>
                 <a href="https://github.com/Vidhi1290/Brain-Tumor-Detection" target="_blank">View Project</a>
             </div>
             <div class="project-card">
@@ -137,7 +199,31 @@
                 <p>An advanced CycleGAN model for style transformation tasks.</p>
                 <a href="https://github.com/Vidhi1290/CycleGAN-Implementation-for-Image-To-Image-Translation" target="_blank">View Project</a>
             </div>
-            <!-- Add more projects dynamically -->
+        </div>
+    </section>
+
+    <!-- Education and Experience Section -->
+    <section id="education">
+        <h2>Education & Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>MSc in AI & ML Ops</h3>
+                <p>SVKM's NMIMS, Mumbai | 2021-2023</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Founder</h3>
+                <p>Data Science Meets Cybersecurity | 2021 - Present</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accomplishments Section -->
+    <section id="accomplishments">
+        <h2>Accomplishments</h2>
+        <div class="badges-container">
+            <span class="badge">Top 15 Cybersecurity Researcher</span>
+            <span class="badge">15+ Hall of Fame Acknowledgments</span>
+            <span class="badge">MSc Thesis Ranked 1st</span>
         </div>
     </section>
 
@@ -146,9 +232,9 @@
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:vidhiwaghela99@gmail.com">vidhiwaghela99@gmail.com</a></p>
         <p>Phone: +91 9152257810</p>
-        <div class="social-icons">
+        <div class="contact-icons">
             <a href="https://github.com/Vidhi1290" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/vidhi-waghela-434663198/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/vidhi-waghela-434663198/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/vidhi_waghela__/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </section>
